@@ -71,7 +71,7 @@ std::string infx2pstfx(std::string inf) {
     return str;
 }
 
-int eval(std::string pref) {
+int eval(std::string post) {
     TStack<int, 100> stack2;
     for (char i : post) {
         if (i == '+') {
