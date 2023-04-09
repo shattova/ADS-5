@@ -8,7 +8,7 @@ class TStack {
  private:
     T arr[size] = {0};
     int a;
-    
+
  public:
     TStack() {
         a = -1;
@@ -31,8 +31,7 @@ class TStack {
     void push(const T& value) {
         if (isFull()) {
             throw std::string(" empty");
-        }
-        else {
+        } else {
             arr[++a] = value;
         }
     }
