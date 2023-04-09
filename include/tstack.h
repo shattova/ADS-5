@@ -6,31 +6,33 @@
 template<typename T, int size>
 class TStack {
 private:
-    type arr[size] = { 0 };
-    int top;
+    T arr[size] = {0};
+    int a;
 public:
-    TStack() :top(-1) { }
-    type get() const {
-        return arr[top];
+    TStack() {
+        a = -1;
     }
-    type pop() {
-        return arr[top--];
+    T get() const {
+        return arr[a];
+    }
+    T pop() {
+        return arr[a--];
     }
     int pri() const {
-        return top;
+        return a;
     }
     bool isEmpty() const {
-        return top == -1;
+        return a == -1;
     }
     bool isFull() const {
-        return top == size;
+        return a == size;
     }
     void push(const T& value) {
         if (isFull()) {
             throw std::string(" empty");
         }
         else {
-            arr[++top] = value;
+            arr[++a] = value;
         }
     }
 };
